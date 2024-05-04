@@ -9,9 +9,9 @@
     <body>
         <%@include file="INC/cabecera.inc"%>
         <form action="<%=request.getContextPath()%>/ControladorEleccion" method="POST">
-            <div>
+            <div style="margin-left: 20px">
                 <h2 style="text-align: center">Elije un seguro</h2>
-                <p><strong>*ES NECESARIO ELEGIR AL MENOS UN TIPO DE SEGURO*</strong></p>
+                <p><strong><em>*ES NECESARIO ELEGIR AL MENOS UN TIPO DE SEGURO*</em></strong></p>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="seguro" value="edificios" id="flexCheckDefault" checked>
                     <label class="form-check-label" for="flexCheckDefault">
@@ -19,13 +19,13 @@
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="seguro" value="contenido" id="flexCheckChecked">
+                    <input class="form-check-input" type="checkbox" name="seguro" value="contenido" id="flexCheckChecked" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Seguro de contenido
                     </label>
                 </div>
                 
-                <button class="btn btn-primary" type="submit" style="margin-right: 20px">Enviar</button>
+                <button class="btn btn-primary" type="submit" style="margin-right: 20px; margin-bottom: 10px">Enviar</button>
                 
             </div>
         </form>

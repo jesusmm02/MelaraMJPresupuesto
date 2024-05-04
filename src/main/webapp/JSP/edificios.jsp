@@ -9,9 +9,9 @@
     <body>
         <%@include file="../INC/cabecera.inc"%>
         <form action="<%=request.getContextPath()%>/ControladorEdificios">
-            <div>
+            <div style="margin-left: 20px">
                 <h2 style="text-align: center">Póliza de edificios</h2>
-                <p><strong>*Inserte la información de su hogar, y a continuación, haga clic en el botón Enviar*</strong></p>
+                <p><em>*Inserte la información de su hogar, y a continuación, haga clic en el botón <strong>Enviar</strong>*</em></p>
                 
                 <label class="form-label" style="font-weight: bold">Tipo de edificio:</label>
                 <select class="form-select" aria-label="Default select example">
@@ -55,7 +55,7 @@
                     </label>
                 </div>
                 
-                 <label class="form-label" style="font-weight: bold">Valor estimado en el mercado:</label>
+                <label class="form-label" style="font-weight: bold">Valor estimado en el mercado:</label>
                 <select class="form-select" aria-label="Default select example">
                     <option value="25000" selected>Menos de 50000</option>
                     <option value="50001">50001-80000</option>
@@ -64,7 +64,7 @@
                     <option value="125000">Más de 150000</option>
                 </select>
                 
-                <button class="btn btn-primary" type="submit" style="margin-right: 20px">Enviar</button>
+                <button class="btn btn-primary" type="submit" style="margin-right: 20px; margin-bottom: 10px">Enviar</button>
                 
             </div>
         </form>

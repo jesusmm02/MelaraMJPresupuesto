@@ -9,9 +9,9 @@
     <body>
         <%@include file="../INC/cabecera.inc"%>
         <form action="<%=request.getContextPath()%>/ControladorContenido">
-            <div>
+            <div style="margin-left: 20px">
                 <h2 style="text-align: center">Póliza de contenidos</h2>
-                <p><strong>*Inserte la información de su contenido, y a continuación, haga clic en el botón Enviar*</strong></p>
+                <p><em>*Inserte la información de su contenido, y a continuación, haga clic en el botón <strong>Enviar</strong>*</em></p>
                 
                 <label class="form-label" style="font-weight: bold">Cubrir daños accidentales</label>
                 <div class="form-check">
@@ -42,14 +42,14 @@
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
                     <label class="form-check-label" for="flexRadioDefault2">
                       1000
                     </label>
                 </div>
  
                 
-                <button class="btn btn-primary" type="submit" style="margin-right: 20px">Enviar</button>
+                <button class="btn btn-primary" type="submit" style="margin-right: 20px; margin-bottom: 10px">Enviar</button>
                 
             </div>
         </form>

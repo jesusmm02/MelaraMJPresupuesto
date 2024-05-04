@@ -1,5 +1,7 @@
 package es.albarregas.controllers;
 
+import es.albarregas.beans.EleccionBean;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,29 +43,36 @@ public class ControladorEleccion extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        EleccionBean eleccion = new EleccionBean();
+
         try {
 
             String[] seguros = request.getParameterValues("seguro");
 
             if (seguros != null && seguros.length > 0) {
-                for (String seguro : seguros) {
-                    switch (seguro) {
+                int[] eleccionSeguros = new int[seguros.length];
+                
+                for (int i = 0; i < seguros.length; i++) {
+                    
+                    switch (seguros[i]) {
                         case "edificios":
-                            request.getRequestDispatcher("../JSP/edificios.jsp").forward(request, response);
+                            eleccionSeguros[i] = 1;
+                            request.getRequestDispatcher("./JSP/edificios.jsp").forward(request, response);
                             return;
                         case "contenido":
-                            request.getRequestDispatcher("../JSP/contenido.jsp").forward(request, response);
+                            eleccionSeguros[i] = 2;
+                            request.getRequestDispatcher("./JSP/contenido.jsp").forward(request, response);
                             return;
                     }
                 }
+                eleccion.setEleccion(eleccionSeguros);
             } else {
-                // Si la opción seleccionada no es válida o no se selecciona ninguna, redirige a una página de error o a la página principal.
-                request.getRequestDispatcher("../JSP/error.jsp").forward(request, response);
-            } 
-        } catch(NullPointerException e){
-        // Manejo de cualquier otra excepción que pueda ocurrir
-        request.getRequestDispatcher("../JSP/error.jsp").forward(request, response);
+                request.getRequestDispatcher("../JSP/index.jsp").forward(request, response);
+            }
+        } catch (NullPointerException e) {
+            request.getRequestDispatcher("../JSP/index.jsp").forward(request, response);
         }
+        
     }
 
     /**
