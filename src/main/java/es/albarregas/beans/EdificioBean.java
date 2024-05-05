@@ -1,10 +1,12 @@
 package es.albarregas.beans;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jesús
  */
-public class EdificioBean {
+public class EdificioBean implements Serializable{
     
     private String[] tipoEdificio;
     private String[] numHabitaciones;

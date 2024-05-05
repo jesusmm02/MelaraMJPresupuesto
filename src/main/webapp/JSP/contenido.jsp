@@ -8,19 +8,19 @@
     </head>
     <body>
         <%@include file="../INC/cabecera.inc"%>
-        <form action="<%=request.getContextPath()%>/ControladorContenido">
+        <form action="<%=request.getContextPath()%>/ControladorContenido" method="POST">
             <div style="margin-left: 20px">
                 <h2 style="text-align: center">Póliza de contenidos</h2>
                 <p><em>*Inserte la información de su contenido, y a continuación, haga clic en el botón <strong>Enviar</strong>*</em></p>
                 
                 <label class="form-label" style="font-weight: bold">Cubrir daños accidentales</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault"></label>
+                    <input class="form-check-input" type="checkbox" value="true" id="cubrirDanos" name="cubrirDanos">
+                    <label class="form-check-label" for="cubrirDanos"></label>
                 </div>
                 
                 <label class="form-label" style="font-weight: bold">Cantidad que requiere asegurar:</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" name="cantidadASegurar">
                     <option value="10000" selected>10000</option>
                     <option value="20000">20000</option>
                     <option value="30000">30000</option>
@@ -30,20 +30,20 @@
                 
                 <label class="form-label" style="font-weight: bold">Franquicia</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <input class="form-check-input" type="radio" name="franquicia" id="flexRadioDefault1" value="0" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
                       Ninguna
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="franquicia" id="flexRadioDefault2" value="500">
                     <label class="form-check-label" for="flexRadioDefault2">
                       500
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="franquicia" id="flexRadioDefault3" value="1000">
+                    <label class="form-check-label" for="flexRadioDefault3">
                       1000
                     </label>
                 </div>

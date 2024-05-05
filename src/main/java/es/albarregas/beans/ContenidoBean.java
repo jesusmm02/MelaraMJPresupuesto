@@ -1,17 +1,19 @@
 package es.albarregas.beans;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jesús
  */
-public class ContenidoBean {
+public class ContenidoBean implements Serializable{
     
-    private boolean cubrirDannos;
+    private boolean cubrirDanos;
     private String[] cantidadASegurar;
     private int[] franquicia;
 
-    public boolean isCubrirDannos() {
-        return cubrirDannos;
+    public boolean isCubrirDanos() {
+        return cubrirDanos;
     }
 
     public String[] getCantidadASegurar() {
@@ -22,8 +24,8 @@ public class ContenidoBean {
         return franquicia;
     }
 
-    public void setCubrirDannos(boolean cubrirDannos) {
-        this.cubrirDannos = cubrirDannos;
+    public void setCubrirDanos(boolean cubrirDanos) {
+        this.cubrirDanos = cubrirDanos;
     }
 
     public void setCantidadASegurar(String[] cantidadASegurar) {
